@@ -58,7 +58,7 @@ function draw() {
 
         circle(rightWristX, rightWristY, 20);
 
-        if (scoreLeftWrist > 0.2) {
+        if (rightWristY > 0 && rightWristY <= 100) {
             {
                 document.getElementById("speed").innerHTML = "Speed = 0.5x";
                 song.rate(0.5);
@@ -81,18 +81,18 @@ function draw() {
 
 
 
+    if (scoreLeftWristY > 0.2) {
+        circle(leftWristX, leftWristY, 20);
+        InNumberleftWristY = Number(leftWristY);
+        remove_decimals = floor(InNumberleftWristY);
+        volume = remove_decimals / 500;
+        document.getElementById("volume").innerHTML = "volume = " + volume;
+        song.setVolume(volume);
+    }
 
-    circle(leftWristX, leftWristY, 20);
-    InNumberleftWristY = Number(leftWristY);
-    remove_decimals = floor(InNumberleftWristY);
-    volume = remove_decimals / 500;
-    document.getElementById("volume").innerHTML = "volume = " + volume;
-    song.setVolume(volume);
-}
 
-
-function play() {
-    song.play();
-    //song.volume(1);
-    song.rate(1);
-}
+    function play() {
+        song.play();
+        song.volume(1);
+        song.rate(1);
+    }
