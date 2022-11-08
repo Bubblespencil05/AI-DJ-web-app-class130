@@ -1,0 +1,27 @@
+#spantag {
+    color: black;
+    font-size: 12px;
+}
+
+.div_speed_img {
+    width: 250px;
+    border-radius: 100px;
+}
+
+.div_speed {
+    float: left;
+}
+
+.div_volume {
+    float: right;
+}
+
+.play_button {
+    width: 130px;
+    font-size: 25px;
+}
+
+canvas {
+    border: 5px dotted white;
+    border-radius: 20px;
+}
